@@ -1,0 +1,358 @@
+SALES MIS AUTOMATION - POWER AUTOMATE DESKTOP
+=============================================
+
+PURPOSE
+-------
+One-click automation:
+
+RUN_MIS_AUTOMATION.bat
+        ↓
+Python automation
+        ↓
+CSV files → MySQL
+        ↓
+Open Mis_Automation.pbix
+        ↓
+Power BI Refresh
+        ↓
+Wait for refresh
+        ↓
+Save PBIX
+
+
+=================================================
+1. FINAL BAT FILE
+=================================================
+
+File:
+C:\Users\Hooooo\Downloads\MIS\RUN_MIS_AUTOMATION.bat
+
+CONTENT:
+
+@echo off
+title SALES MIS AUTOMATION
+
+cd /d "C:\Users\Hooooo\Downloads\MIS"
+
+echo ==========================================
+echo SALES MIS AUTOMATION STARTED
+echo ==========================================
+
+py run_mis_automation.py
+
+if errorlevel 1 (
+    echo.
+    echo AUTOMATION FAILED
+    exit /b 1
+)
+
+echo.
+echo ==========================================
+echo CSV + SQL AUTOMATION COMPLETED
+echo ==========================================
+exit /b 0
+
+
+IMPORTANT:
+Do NOT use "pause" at the end of the BAT file.
+
+
+=================================================
+2. POWER AUTOMATE DESKTOP FLOW
+=================================================
+
+Flow Name:
+
+SALES MIS ONE CLICK
+
+
+-------------------------------------------------
+ACTION 1 - RUN BAT FILE
+-------------------------------------------------
+
+Action:
+Run application
+
+Application path:
+
+C:\Windows\System32\cmd.exe
+
+Command line arguments:
+
+/c "C:\Users\Hooooo\Downloads\MIS\RUN_MIS_AUTOMATION.bat"
+
+Enable:
+
+Wait for application to complete = YES
+
+
+Purpose:
+
+Runs Python automation and waits until CSV → MySQL
+processing is completed.
+
+
+-------------------------------------------------
+ACTION 2 - OPEN POWER BI
+-------------------------------------------------
+
+Action:
+Run application
+
+Application path:
+
+C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe
+
+Command line arguments:
+
+"C:\Users\Hooooo\Documents\Power Bi\Mis_Automation.pbix"
+
+
+IMPORTANT:
+
+If PBIDesktop.exe is installed somewhere else,
+use Browse and select PBIDesktop.exe.
+
+If Mis_Automation.pbix is stored somewhere else,
+replace the PBIX path with the actual path.
+
+
+-------------------------------------------------
+ACTION 3 - WAIT FOR POWER BI
+-------------------------------------------------
+
+Action:
+Wait
+
+Duration:
+
+30 seconds
+
+
+Purpose:
+
+Allows Power BI Desktop and the PBIX report
+to finish loading.
+
+
+-------------------------------------------------
+ACTION 4 - CLICK REFRESH
+-------------------------------------------------
+
+Action:
+
+Click UI element in window
+
+Use PAD UI element picker and capture the
+Power BI "Refresh" button.
+
+Rename the captured UI element:
+
+PowerBI_Refresh_Button
+
+
+Configure:
+
+UI element:
+PowerBI_Refresh_Button
+
+
+Purpose:
+
+Automatically clicks:
+
+Home → Refresh
+
+
+-------------------------------------------------
+ACTION 5 - WAIT FOR REFRESH
+-------------------------------------------------
+
+Action:
+
+Wait
+
+Duration:
+
+60 seconds
+
+
+If refresh takes longer, use:
+
+90 seconds
+
+or
+
+120 seconds
+
+
+-------------------------------------------------
+ACTION 6 - SAVE PBIX
+-------------------------------------------------
+
+Action:
+
+Send keys
+
+Keyboard shortcut:
+
+Ctrl + S
+
+
+Purpose:
+
+Saves the refreshed Power BI report.
+
+
+-------------------------------------------------
+ACTION 7 - FINAL WAIT
+-------------------------------------------------
+
+Action:
+
+Wait
+
+Duration:
+
+5 seconds
+
+
+=================================================
+3. EXACT FINAL PAD FLOW
+=================================================
+
+1. Run application
+
+   Application:
+   C:\Windows\System32\cmd.exe
+
+   Arguments:
+   /c "C:\Users\Hooooo\Downloads\MIS\RUN_MIS_AUTOMATION.bat"
+
+   Wait for application to complete:
+   YES
+
+
+2. Run application
+
+   Application:
+   C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe
+
+   Arguments:
+   "C:\Users\Hooooo\Documents\Power Bi\Mis_Automation.pbix"
+
+
+3. Wait
+
+   30 seconds
+
+
+4. Click UI element in window
+
+   UI element:
+   PowerBI_Refresh_Button
+
+
+5. Wait
+
+   60 seconds
+
+
+6. Send keys
+
+   Ctrl + S
+
+
+7. Wait
+
+   5 seconds
+
+
+=================================================
+4. ONE-CLICK FINAL RESULT
+=================================================
+
+Run PAD
+   ↓
+RUN_MIS_AUTOMATION.bat
+   ↓
+Python automation
+   ↓
+CSV files processed
+   ↓
+MySQL updated
+   ↓
+SQL exception logic/views updated
+   ↓
+Power BI Desktop opens
+   ↓
+Mis_Automation.pbix opens
+   ↓
+Refresh clicked automatically
+   ↓
+Dashboard updated
+   ↓
+Ctrl + S
+   ↓
+PBIX saved
+   ↓
+DONE
+
+
+=================================================
+5. FIRST TEST
+=================================================
+
+Before running complete PAD flow:
+
+1. Double-click RUN_MIS_AUTOMATION.bat.
+
+2. Confirm Python completes without errors.
+
+3. Check MySQL data is updated.
+
+4. Open Mis_Automation.pbix manually.
+
+5. Click Refresh manually once.
+
+6. Confirm dashboard values update.
+
+7. Close Power BI.
+
+8. Run the PAD flow.
+
+
+=================================================
+6. IMPORTANT NOTES
+=================================================
+
+- Do NOT keep "pause" in the BAT file.
+- MySQL service must be running.
+- Python command "py" must work from CMD.
+- PBIX path must be correct.
+- Capture the actual Power BI Refresh button using PAD.
+- Keep Power BI visible while testing UI automation.
+- If Power BI takes longer to open, increase 30-second wait.
+- If refresh takes longer, increase 60-second wait.
+- Existing Power BI dashboard/model does not need to be changed.
+
+
+=================================================
+FINAL AUTOMATION
+=================================================
+
+CSV
+ ↓
+Python
+ ↓
+MySQL
+ ↓
+SQL Exception Logic
+ ↓
+Power BI
+ ↓
+Refresh
+ ↓
+Save
+ ↓
+DONE ✅

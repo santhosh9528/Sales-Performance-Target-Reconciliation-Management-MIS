@@ -1,0 +1,29 @@
+### Final Management Questions – Answers
+
+**1. Which region is underperforming?**
+
+R03 is the lowest-performing region by actual sales, with total sales of ₹66,709,401.96. The region requires focused sales recovery and performance monitoring.
+
+**2. Which employees require management attention?**
+
+Employees achieving below 70% of their target require management attention. The lowest-performing employee is E1116 with an achievement of 24.22%, followed by E1115 at 25.43% and E1002 at 26.36%. Individual improvement plans and regular performance monitoring are recommended.
+
+**3. Why is achievement below target?**
+
+Overall September MTD achievement is only 40.53%, resulting in a sales gap of ₹38.89M. The major reasons are low employee target achievement, underperforming regions, and declining product sales. Sales follow-up and high-value opportunity conversion should be increased.
+
+**4. Which products are driving the decline?**
+
+Products P3008, P3037 and P3031 are the largest declining products. Management should review product demand, pricing, availability and sales strategy for these products.
+
+**5. Where are reconciliation issues occurring?**
+
+There are 30 orders without corresponding sales records. In addition, 602 sales transactions have no matching collection. These records require investigation by the sales and finance teams.
+
+**6. How much revenue is affected by returns?**
+
+The revenue impact from returns is ₹8.41M. Return reasons should be analyzed to identify recurring product or customer issues and reduce future returns.
+
+**7. What should management do next month?**
+
+Management should focus on recovering sales in underperforming regions, especially R03, improve the performance of employees below target, review declining products, follow up on pending collections, resolve order-to-sales reconciliation issues, and reduce recurring returns through targeted corrective actions.

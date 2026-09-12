@@ -1,0 +1,168 @@
+============================================================
+              SALES MIS - DATA QUALITY REPORT
+============================================================
+
+1. DATA QUALITY SUMMARY
+------------------------------------------------------------
+
+Total Validation Checks : 9
+Passed Checks            : 2
+Failed Checks            : 7
+Total Issues             : 1069
+Overall Status           : FAIL
+
+
+2. DATA QUALITY VALIDATION RESULTS
+------------------------------------------------------------
+
+Check ID : DQ001
+Dataset  : Employee_Master
+Validation : Duplicate Employees
+Issue Count : 0
+Severity : High
+Status : PASS
+
+
+Check ID : DQ002
+Dataset  : Customer_Master
+Validation : Duplicate Customers
+Issue Count : 2
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ003
+Dataset  : Daily_Sales
+Validation : Invalid Employee IDs
+Issue Count : 1
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ004
+Dataset  : Daily_Sales
+Validation : Invalid Product IDs
+Issue Count : 1
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ005
+Dataset  : Daily_Sales
+Validation : Invalid Region Codes
+Issue Count : 0
+Severity : High
+Status : PASS
+
+
+Check ID : DQ006
+Dataset  : Daily_Sales
+Validation : Duplicate Transactions
+Issue Count : 1
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ007
+Dataset  : Daily_Sales
+Validation : Incorrect Dates
+Issue Count : 1
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ008
+Dataset  : Daily_Sales
+Validation : Negative Sales
+Issue Count : 1
+Severity : High
+Status : FAIL
+
+
+Check ID : DQ009
+Dataset  : Monthly_Targets
+Validation : Invalid Target Values
+Issue Count : 1062
+Severity : High
+Status : FAIL
+
+
+3. KEY FINDINGS
+------------------------------------------------------------
+
+1. Customer_Master contains 2 duplicate customer records.
+
+2. Daily_Sales contains 1 invalid Employee ID.
+
+3. Daily_Sales contains 1 invalid Product ID.
+
+4. Daily_Sales contains 1 duplicate transaction.
+
+5. Daily_Sales contains 1 incorrect date.
+
+6. Daily_Sales contains 1 negative sales transaction.
+
+7. Monthly_Targets contains 1062 invalid target values.
+
+8. Employee_Master duplicate validation passed with 0 issues.
+
+9. Daily_Sales Region Code validation passed with 0 issues.
+
+
+4. MANAGEMENT IMPACT
+------------------------------------------------------------
+
+The major data quality issue is identified in the
+Monthly_Targets dataset, where 1062 invalid target values
+were detected.
+
+Invalid target values can directly affect:
+
+- Monthly Target
+- Achievement %
+- Sales Gap
+- Employee Performance
+- Region Performance
+- Management KPI reporting
+
+
+5. RECOMMENDATIONS
+------------------------------------------------------------
+
+1. Correct the invalid target values in Monthly_Targets.
+
+2. Investigate and resolve duplicate customer records.
+
+3. Correct invalid Employee IDs in Daily_Sales.
+
+4. Correct invalid Product IDs in Daily_Sales.
+
+5. Investigate the duplicate sales transaction.
+
+6. Review and correct the incorrect sales date.
+
+7. Investigate and remove/correct the negative sales transaction.
+
+8. Re-run all data-quality checks after corrections.
+
+9. Only use validated data for final management reporting.
+
+
+6. OVERALL CONCLUSION
+------------------------------------------------------------
+
+The Data Quality Report identified 1069 issues across
+9 validation checks.
+
+2 checks passed and 7 checks failed.
+
+The most significant issue is the Monthly_Targets dataset,
+which contains 1062 invalid target values.
+
+The identified data-quality issues should be investigated
+and corrected before finalizing target-based management KPIs.
+
+
+============================================================
+             END OF DATA QUALITY REPORT
+============================================================
