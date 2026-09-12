@@ -2,37 +2,30 @@
 
 ## 📌 Project Overview
 
-This project is an end-to-end **Sales Performance, Target Reconciliation & Management MIS Reporting System** designed to provide management with a clear view of sales performance, target achievement, employee performance, regional performance, financial reconciliation, and business exceptions.
+This project is an end-to-end **Sales Performance, Target Reconciliation & Management MIS Reporting System** developed to provide management with a clear and centralized view of business performance.
 
-The organization operates across multiple regions with several sales teams, customers, and product categories.
+The organization operates across multiple regions with multiple sales employees, customers, products, orders, returns, and finance collections.
 
-Management identified inconsistencies between:
+Management identified inconsistencies between **sales targets, actual sales, order records, returns, and collections**.
 
-- Sales Targets
-- Actual Sales
-- Order Records
-- Returns
-- Finance Collections
-- Employee Performance
-- Regional Performance
-
-The objective of this project is to validate business data, reconcile transactions, identify exceptions, automate MIS reporting, and provide management with actionable insights through an interactive **Power BI Management Dashboard**.
+The objective of this project is to validate business data, analyze sales performance, reconcile transactions, identify exceptions, automate MIS reporting, and provide actionable management insights through an interactive **Power BI Management Dashboard**.
 
 ---
 
 ## 🎯 Business Objectives
 
-The project was developed to help management understand:
+The project helps management understand:
 
 - Whether sales teams are achieving their targets
 - Which employees are underperforming
 - Which regions are below target
+- Why sales achievement is below expectations
 - Whether orders and sales records match
 - Whether sales and collections reconcile
-- How returns affect net sales
+- How returns affect business revenue
 - Where reconciliation issues are occurring
-- Which exceptions require management attention
-- How daily MIS reporting can be automated
+- Which exceptions require immediate attention
+- How MIS reporting can be automated
 
 ---
 
@@ -55,7 +48,7 @@ The project uses the following business datasets:
 
 ## 🛠️ Tools & Technologies
 
-The project uses:
+The project was developed using:
 
 - **Microsoft Excel**
 - **Power Query**
@@ -64,7 +57,7 @@ The project uses:
 - **Power BI**
 - **DAX**
 
-These technologies were used for data cleaning, validation, transformation, reconciliation, automation, analysis, and dashboard development.
+These technologies were used for data cleaning, validation, transformation, reconciliation, automation, analysis, reporting, and dashboard development.
 
 ---
 
@@ -98,7 +91,7 @@ Management Insights
 
 # 1️⃣ Data Validation
 
-The first stage focuses on identifying data-quality issues before performing business analysis.
+The first stage focuses on identifying and handling data-quality issues.
 
 ### Validation Checks
 
@@ -112,15 +105,15 @@ The first stage focuses on identifying data-quality issues before performing bus
 - Negative Sales Values
 - Invalid Target Values
 
-A separate **Data Quality Report** was created to document the identified issues.
+A separate **Data Quality Report** was created to document the identified data-quality issues.
 
 ---
 
 # 2️⃣ Sales MIS Analysis
 
-The Sales MIS provides management with important sales and target performance indicators.
+The Sales MIS provides management with important sales and target performance metrics.
 
-### KPIs
+### Key Performance Indicators
 
 - Daily Sales
 - Month-to-Date (MTD) Sales
@@ -131,7 +124,7 @@ The Sales MIS provides management with important sales and target performance in
 - Growth %
 - Average Order Value
 
-These metrics help management compare actual sales performance against predefined business targets.
+These metrics help management compare actual sales performance against business targets.
 
 ---
 
@@ -145,14 +138,14 @@ Employee performance is evaluated using:
 - Average Order Value
 - Sales Growth
 
-The analysis identifies:
+The analysis helps identify:
 
 - Top 10 Performers
 - Bottom 10 Performers
 - Employees Below 70% Target
 - Employees with Declining Performance
 
-This helps management identify high performers and employees who require additional attention.
+This allows management to quickly identify employees who require additional attention.
 
 ---
 
@@ -167,13 +160,13 @@ Regional performance is evaluated using:
 - Growth %
 - Sales Contribution
 
-This analysis helps management compare business performance across regions and identify underperforming areas.
+This analysis helps identify high-performing and underperforming regions.
 
 ---
 
 # 5️⃣ Sales & Finance Reconciliation
 
-The project implements reconciliation across the complete transaction lifecycle.
+The project implements reconciliation across the complete transaction lifecycle:
 
 ```text
 Orders
@@ -192,7 +185,7 @@ The reconciliation process identifies:
 - Orders Without Sales Records
 - Sales Without Collections
 - Sales and Collection Mismatches
-- Return-Related Discrepancies
+- Return-Related Differences
 - Missing Transactions
 - Reconciliation Exceptions
 
@@ -200,11 +193,11 @@ This helps identify inconsistencies between operational and financial records.
 
 ---
 
-# 6️⃣ Exception Analysis
+# 6️⃣ Exception Reporting
 
-An automated **Exception Report** identifies business records that require management attention.
+An automated **Exception Report** identifies business records requiring management attention.
 
-### Exceptions Monitored
+### Exceptions Include
 
 - Employees Below Target
 - Regions Below Target
@@ -221,7 +214,7 @@ This allows management to focus on important exceptions instead of manually revi
 
 # 7️⃣ MIS Automation
 
-The reporting workflow is designed so that updated daily business files can be processed without manually rebuilding the entire MIS.
+The reporting workflow is designed so that updated business data can be processed without manually rebuilding the complete MIS.
 
 Automation uses:
 
@@ -229,7 +222,7 @@ Automation uses:
 - SQL
 - Python
 
-### Automated MIS Workflow
+### Automated Workflow
 
 ```text
 New Daily Data
@@ -259,35 +252,25 @@ This reduces repetitive manual reporting work and improves reporting consistency
 
 # 📊 Power BI Management Dashboard
 
-The Power BI report contains multiple analytical dashboard pages designed to provide management with a consolidated view of business performance.
-
-The report includes:
-
-1. Management Dashboard
-2. Employee Performance Dashboard
-3. Region Analysis Dashboard
-4. Reconciliation Dashboard
-5. Exception Analysis Dashboard
-6. Automated Exception Report
+The Power BI report contains multiple analytical dashboard pages designed to provide management with a consolidated view of sales performance, employee performance, regional performance, reconciliation, and business exceptions.
 
 ---
 
 ## 📌 Management Dashboard
 
-The **Management Dashboard** provides a high-level overview of overall business performance.
+The **Management Dashboard** provides a high-level view of overall business performance.
 
-It allows management to monitor important KPIs and quickly identify performance trends.
-
-### Key Areas
+It allows management to monitor:
 
 - Sales
 - Targets
-- Achievement %
+- Achievement
 - Growth
-- Returns
 - Collections
-- Employee Performance
+- Returns
 - Regional Performance
+- Employee Performance
+- Business Exceptions
 
 ### 🖼️ Dashboard Preview
 
@@ -303,6 +286,8 @@ It helps identify:
 
 - Employee Sales
 - Target Achievement
+- Number of Orders
+- Average Order Value
 - Top Performers
 - Bottom Performers
 - Employee Ranking
@@ -316,9 +301,9 @@ It helps identify:
 
 ## 🌍 Region Analysis Dashboard
 
-The **Region Analysis Dashboard** compares sales performance across different business regions.
+The **Region Analysis Dashboard** compares business performance across different regions.
 
-### Analysis Includes
+The dashboard analyzes:
 
 - Regional Sales
 - Regional Targets
@@ -352,34 +337,34 @@ Net Sales
 Collections
 ```
 
-It helps identify:
+The dashboard helps identify:
 
 - Orders Without Sales
 - Sales Without Collections
 - Collection Mismatches
 - Return Differences
 - Missing Transactions
-- Financial Reconciliation Issues
+- Reconciliation Exceptions
 
 ### 🖼️ Dashboard Preview
 
-![Reconciliation Dashboard](MIS/Power%20BI/Dashboard%20screenshots/Reconciliation.png)
+![Reconciliation Dashboard](MIS/Power%20BI/Dashboard%20screenshots/Reconciliation%20.png)
 
 ---
 
 ## 🚨 Exception Analysis Dashboard
 
-The **Exception Analysis Dashboard** highlights business issues that require management attention.
+The **Exception Analysis Dashboard** highlights important business exceptions that require management attention.
 
-### Exceptions Include
+The dashboard helps identify:
 
 - Employees Below Target
 - Regions Below Target
 - High Returns
 - Missing Transactions
 - Duplicate Transactions
-- Collection Issues
-- Reconciliation Problems
+- Sales Without Collections
+- Reconciliation Issues
 
 ### 🖼️ Dashboard Preview
 
@@ -391,20 +376,21 @@ The **Exception Analysis Dashboard** highlights business issues that require man
 
 The **Automated Exception Report** provides a structured view of automatically detected business exceptions.
 
-It helps reduce manual checking and allows management to focus directly on records requiring attention.
+It helps reduce manual checking and allows management to quickly identify records requiring investigation.
 
-### Examples
+### Exceptions Monitored
 
 - Employees Below Target
 - Regions Below Target
 - Missing Transactions
+- Duplicate Transactions
 - Sales Without Collections
 - Orders Without Sales Records
 - Reconciliation Exceptions
 
 ### 🖼️ Dashboard Preview
 
-![Automated Exception Report](MIS/Power%20BI/Dashboard%20screenshots/Exception%20Report%20Automated.png)
+![Automated Exception Report](MIS/Power%20BI/Dashboard%20screenshots/Exception%20Report%20Automated%20.png)
 
 ---
 
@@ -412,18 +398,18 @@ It helps reduce manual checking and allows management to focus directly on recor
 
 | Dashboard | Primary Focus |
 |---|---|
-| Management Dashboard | Overall business performance and KPIs |
-| Employee Performance | Employee sales, targets and ranking |
-| Region Analysis | Regional sales and target performance |
-| Reconciliation | Orders, sales, returns and collections |
-| Exception Analysis | Business exception identification |
-| Automated Exception Report | Automated monitoring of exceptions |
+| **Management Dashboard** | Overall business performance and management KPIs |
+| **Employee Performance** | Employee sales, targets, achievement and ranking |
+| **Region Analysis** | Regional sales and target performance |
+| **Reconciliation** | Orders, sales, returns and collections reconciliation |
+| **Exception Analysis** | Identification of business exceptions |
+| **Automated Exception Report** | Automated monitoring of exception records |
 
 ---
 
 # ❓ Management Questions
 
-The project is designed to answer the following key management questions:
+The project is designed to answer the following management questions:
 
 1. Which region is underperforming?
 2. Which employees require management attention?
@@ -447,7 +433,7 @@ The completed project includes:
 - Sales MIS Calculations
 - Employee Performance Analysis
 - Regional Performance Analysis
-- Reconciliation Analysis
+- Reconciliation Checks
 - Exception Report
 - Python Automation
 - Automated MIS Refresh Workflow
@@ -460,7 +446,7 @@ The completed project includes:
 
 The MIS system provides management with a centralized reporting framework to:
 
-- Monitor Sales Performance Against Targets
+- Monitor Sales Against Targets
 - Track Employee Performance
 - Identify Underperforming Employees
 - Compare Regional Performance
@@ -471,7 +457,7 @@ The MIS system provides management with a centralized reporting framework to:
 - Identify Reconciliation Issues
 - Automatically Detect Business Exceptions
 - Reduce Repetitive Manual Reporting
-- Improve Reporting Accuracy
+- Improve Reporting Consistency
 - Support Faster Management Decisions
 
 ---
@@ -488,20 +474,17 @@ Repository/
 │   │   ├── Dashboard screenshots/
 │   │   │   ├── Employee Performance.png
 │   │   │   ├── Exception Analysis.png
-│   │   │   ├── Exception Report Automated.png
+│   │   │   ├── Exception Report Automated .png
 │   │   │   ├── Management Dashboard.png
-│   │   │   ├── Reconciliation.png
+│   │   │   ├── Reconciliation .png
 │   │   │   └── Region Analysis.png
 │   │   │
 │   │   └── Dashboards/
 │   │
-│   ├── Cleaned Data/
-│   ├── Data Quality Report/
-│   ├── Excel MIS/
-│   ├── Exception Report/
-│   ├── Management Summary/
-│   ├── Python/
-│   └── SQL/
+│   ├── Attendance.csv
+│   ├── Clean_Views.sql
+│   ├── Collections.csv
+│   └── Other Project Files/
 │
 └── README.md
 ```
@@ -565,28 +548,17 @@ Power BI Reporting
 Management Insights
 ```
 
-The solution demonstrates how different data analytics technologies can work together to convert operational business data into a structured management reporting system.
+The solution demonstrates how multiple data analytics technologies can work together to transform operational business data into structured management information.
 
 ---
 
 # 📝 Conclusion
 
-This project demonstrates the development of an end-to-end **Sales Performance and Management MIS Solution**.
+This project demonstrates the development of an end-to-end **Sales Performance, Target Reconciliation & Management MIS Solution**.
 
-By integrating **Excel, Power Query, SQL, Python, DAX, and Power BI**, the solution supports:
+By integrating **Excel, Power Query, SQL, Python, DAX, and Power BI**, the solution supports data validation, sales analysis, target monitoring, employee performance analysis, regional performance analysis, financial reconciliation, exception detection, automation, and interactive management reporting.
 
-- Data Validation
-- Data Cleaning
-- Sales Analysis
-- Target Monitoring
-- Employee Performance Analysis
-- Regional Performance Analysis
-- Financial Reconciliation
-- Exception Detection
-- MIS Automation
-- Interactive Management Reporting
-
-The resulting MIS helps management identify performance gaps, operational discrepancies, and areas requiring attention while reducing repetitive manual reporting work.
+The resulting MIS helps management identify performance gaps, operational discrepancies, and records requiring attention while reducing repetitive manual reporting work.
 
 ---
 
